@@ -1,31 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Email from '../images/Email'
 import Globe from '../images/Globe'
 
 const Div = styled.div`
   display: flex;
+  width: 60px;
+  justify-content: space-between;
 `
 
 const Logos = ({website, email}) => {
   return (
     <Div>
-      <a href={website}>
-        Globe
-        {/* <Globe style={{height: '30px'}}/> */}
+      <a href={`http://www.${website}`} target='_blank' rel="noopener noreferrer">
+        <Globe />
       </a>
       <a href={`mailto:${email}`}>
-        Email
-        {/* <Email style={{height: '30px'}}/> */}
+        <Email />
       </a>
     </Div>
   );
-};
-
-Logos.propTypes = {
-  website: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired
 };
 
 export default Logos;

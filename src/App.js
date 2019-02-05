@@ -10,7 +10,6 @@ class App extends Component {
   componentDidMount() {
     axios.get('https://jsonplaceholder.typicode.com/users')
       .then(res => {
-        console.log(res)
         this.setState({data: res.data})
       })
       .catch(err => this.setState({err}))
