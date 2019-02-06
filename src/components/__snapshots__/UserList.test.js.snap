@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders data correctly 1`] = `
 Array [
   <div
     className="sc-bwzfXH ivwhAr"
@@ -43,4 +43,16 @@ Array [
     </p>
   </div>,
 ]
+`;
+
+exports[`shows emssage if there is no data 1`] = `
+<div
+  style={
+    Object {
+      "margin": "16px",
+    }
+  }
+>
+  There is no matching user
+</div>
 `;

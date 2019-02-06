@@ -50,20 +50,8 @@ class User extends Component {
     }
   }
 
-  renderAddress() {
-    const {item: {address:{street, suite, city, zipcode}, company}} = this.props
-    return (
-      <LowerDiv>
-        <P><strong>{company.name}</strong></P>
-          <P>{`${street} ${suite}`}</P>
-          <P>{city}</P>
-          <P>{zipcode}</P>
-      </LowerDiv>
-    )
-  }
-
   render() {
-    const {item: {name, username, email, website}} = this.props
+    const {item: {name, username, email, website, address:{street, suite, city, zipcode}, company}} = this.props
     const {clicked} = this.state
     return (
       <Div onClick={() => this.setState({clicked: !clicked})}>
@@ -72,7 +60,14 @@ class User extends Component {
           {clicked && <Logos website={website} email={email} /> }
         </UpperDiv>
         <Username>@{username}</Username>
-        {clicked && this.renderAddress()}
+        {clicked &&
+          <LowerDiv>
+          <P><strong>{company.name}</strong></P>
+            <P>{`${street} ${suite}`}</P>
+            <P>{city}</P>
+            <P>{zipcode}</P>
+        </LowerDiv>
+        }
       </Div>
     );
   }

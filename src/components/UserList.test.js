@@ -2,7 +2,7 @@ import React from 'react';
 import UserList from './UserList';
 import renderer from 'react-test-renderer';
 
-it('renders correctly', () => {
+it('renders data correctly', () => {
   const data = [
     {
       id: 1,
@@ -51,6 +51,14 @@ it('renders correctly', () => {
       }
       },
   ]
+  const tree = renderer
+    .create(<UserList data={data} />)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+it('shows emssage if there is no data', () => {
+  const data = []
   const tree = renderer
     .create(<UserList data={data} />)
     .toJSON();
