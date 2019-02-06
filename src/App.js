@@ -18,14 +18,26 @@ class App extends Component {
 
   renderItems = () => {
     const {data, err, filterTerm} = this.state
-    if (isEmpty(data)) return <ReactLoading type='spin' color="#000" />
-    if (err) return 'There is an error!'
+    if (!err && isEmpty(data)) return <ReactLoading type='spin' color="#000" />
+    if (err) return <div>There is an error! {err.message}</div>
     if (!isEmpty(data)) {
-      if (filterTerm === '') return <UserList data={data} />
       const filteredData = data.filter((item) => {
         return item['name'].toLowerCase().search(filterTerm.toLowerCase()) !== -1;
       })
-      return <UserList data={filteredData} />
+      return (
+        <div>
+          <input
+            type='text'
+            placeholder='Search for name'
+            value={filterTerm}
+            onChange={this.onChange}
+            style={{margin: '16px'}}
+            />
+            <UserList data={filterTerm === '' ? data : filteredData} />
+        </div>
+      )
+
+
     }
   }
   onChange = (event) => {
@@ -37,18 +49,7 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <input
-          type='text'
-          placeholder='Search for name'
-          value={this.state.filterTerm}
-          onChange={this.onChange}
-          style={{margin: '16px'}}
-          />
-        {this.renderItems()}
-      </div>
-    )
+    return this.renderItems()
   }
 }
 

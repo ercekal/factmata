@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="sc-bwzfXH ivwhAr"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-htpNat eXoYXI"
+    >
+      <p
+        className="sc-ifAKCX hbpRLv"
+      >
+        Leanne Graham
+      </p>
+    </div>
+    <p
+      className="sc-EHOje cwbZiP"
+    >
+      @
+      Bret
+    </p>
+  </div>,
+  <div
+    className="sc-bwzfXH ivwhAr"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-htpNat eXoYXI"
+    >
+      <p
+        className="sc-ifAKCX hbpRLv"
+      >
+        Ervin Howell
+      </p>
+    </div>
+    <p
+      className="sc-EHOje cwbZiP"
+    >
+      @
+      Antonette
+    </p>
+  </div>,
+]
+`;
