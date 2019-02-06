@@ -14,5 +14,6 @@ $ yarn test
 
 The project will fetch the user details from the given address and render them in desktop and mobile
 
-There is a
+If there is error in fetching data, error message will be shown to user
+Input can be user to filter the users by their name
 
