@@ -16,8 +16,9 @@ In order to run the tests and see the coverage
 
 `$ yarn test`
 
-The project will fetch the user details from the given address and render them in desktop and mobile
+The project will show a loader while fetching the user details from the given address and render them in desktop and mobile
 
-If there is error in fetching data, error message will be shown to user
-Input can be user to filter the users by their name
+If there is error while fetching data, error message will be shown to user
+
+Input can be user to filter the users by their name. If there is no suitable user, it'll show an error message
 
