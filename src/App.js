@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {isEmpty} from 'lodash';
-import Item from './components/Item';
+import UserList from './components/UserList';
 
 class App extends Component {
   state = {
@@ -20,7 +20,7 @@ class App extends Component {
     if (isEmpty(data)) return 'Loading...'
     if (err) return 'There is an error!'
     if (!isEmpty(data)) {
-      return data.map(item => <Item item={item} key={item.id}/>)
+      return <UserList data={data} />
     }
   }
   render() {

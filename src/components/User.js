@@ -42,7 +42,7 @@ const P = styled.p`
   font-size: 16px;
 `
 
-class Item extends Component {
+class User extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -78,4 +78,4 @@ class Item extends Component {
   }
 }
 
-export default Item;
+export default User;
