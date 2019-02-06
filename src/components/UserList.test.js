@@ -57,7 +57,7 @@ it('renders data correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('shows emssage if there is no data', () => {
+it('shows error message if there is no data', () => {
   const data = []
   const tree = renderer
     .create(<UserList data={data} />)

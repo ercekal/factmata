@@ -45,7 +45,7 @@ Array [
 ]
 `;
 
-exports[`shows emssage if there is no data 1`] = `
+exports[`shows error message if there is no data 1`] = `
 <div
   style={
     Object {
